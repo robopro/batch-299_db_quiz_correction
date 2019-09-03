@@ -1,0 +1,53 @@
+# Q1
+# What is a relational database?
+# Answer:
+A set of tables linked by primary key and foreign key
+
+
+# Q2
+# What are the different "table relationships" you know?
+# Answer:
+One to many   1:N
+Many to many  N:N
+One to one    1:1
+
+# Q3
+# Consider this e-library service. An author, defined by his name,
+# has several books. A book, defined by its title and publishing
+# year, has one author only. What's this simple database schema?
+# Answer:
+Author has many books
+Book belongs to one author
+* See the `schema.png` file
+
+# Q4
+# A user, defined by his email, can read several books. A book (e-book!!)
+# can be read by several users. We also want to keep track of reading
+# dates. Improve your e-library DB schema with relevant tables and
+# relationships
+# Answer:
+Book has many reading dates
+User has many reading dates
+Many to many relationship!
+* See the `schema.png` file
+
+# Q5
+# What language do we make queries to DB in
+# Answer:
+SQL (Structured Query Language)
+
+# Q8
+# Why Active Record
+# Answer:
+Design pattern which allows storing relations in DB tables.
+A type of ORM (Object-Relations Mapping).
+
+# Q9
+# What is a migration and how do we do one?
+# Answer:
+A script which allows us to make changes to our *schema*
+(does *not* touch our data).
+Run it with `rake db:migrate`
+
+# Q10 to 14
+See the `quiz_code.rb` file
